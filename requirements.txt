@@ -1,0 +1,11 @@
+fastmcp>=0.4.0
+httpx>=0.24.1
+feedparser>=6.0.8
+python-dotenv>=1.0.0
+markdownify>=0.9.3
+readabilipy>=0.2.0
+beautifulsoup4>=4.12.2
+pydantic>=1.10.11
+PyMuPDF>=1.22.5    # optional for PDF extraction
+aioredis>=2.0.1    # optional for caching
+uvicorn[standard]>=0.22.0
