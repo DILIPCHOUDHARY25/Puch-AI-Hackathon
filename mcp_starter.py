@@ -255,7 +255,20 @@ async def llm_summarize_hook(text: str, max_tokens: int = 500) -> str:
 @mcp.tool
 async def validate() -> str:
     return MY_NUMBER
+ 
+@mcp.tool
+async def about() -> dict[str, str]:
+    server_name = "Research Buddy MCP"
+    server_description = dedent("""
+    A modular Python-based system for managing research workflows. 
+    Provides tools for setting reminders, generating reading lists, searching academic databases, and formatting citations. 
+    Built on the MCP framework with integrations to OpenAlex, CrossRef, arXiv, and AI-powered utilities for summarization and keyword extraction.
+    """)
 
+    return {
+        "name": server_name,
+        "description": server_description
+    }
 
 # ---- search_research_papers ----
 @mcp.tool
